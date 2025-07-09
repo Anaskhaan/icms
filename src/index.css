@@ -1,0 +1,297 @@
+/* src/styles/global.css */
+@import "@fontsource/nunito/400.css";
+@import "@fontsource/nunito/700.css";
+@import "@fontsource/merriweather/400.css";
+@import "@fontsource/merriweather/700.css";
+
+/* Set base styles using Tailwind layers */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Typography reset + global defaults */
+@layer base {
+  html {
+    font-family: 'Nunito', sans-serif;
+    scroll-behavior: smooth;
+  }
+h1, h2, h3, h4, h5, h6 {
+  @apply font-serif;
+}
+
+h1 {
+  @apply text-4xl font-bold mb-4;
+}
+
+h2 {
+  @apply text-3xl font-semibold mb-3;
+}
+
+h3 {
+  @apply text-2xl font-semibold mb-2;
+}
+
+h4 {
+  @apply text-xl font-medium mb-2;
+}
+
+p, span, li, a {
+  @apply font-sans text-base leading-relaxed;
+}
+
+strong {
+  @apply font-bold;
+}
+
+/* ul {
+  @apply list-disc pl-5;
+} */
+
+ol {
+  @apply list-decimal pl-5;
+}
+
+blockquote {
+  @apply border-l-4 border-blue-400 pl-4 italic;
+}
+}
+
+
+:root {
+  /* Primary Colors */
+  --color-primary: #E5252C;
+  --color-primary-light: #F15B61;
+  --color-primary-dark: #A51B1F;
+
+  /* Secondary Colors */
+  --color-secondary: #FFD700;
+  --color-secondary-light: #FFEB66;
+  --color-secondary-dark: #CCAD00;
+
+  /* Success Colors */
+  --color-success: #228B22;
+  --color-success-light: #4CAF50;
+  --color-success-dark: #176117;
+
+  /* Dark Theme Colors */
+  --color-dark: #3B2F2F;
+  --color-dark-light: #5C4B4B;
+
+  /* Light */
+  --color-light: #FFFFFF;
+}
+
+/* Background Colors */
+.bg-primary {
+  background-color: var(--color-primary);
+}
+.bg-primary-light {
+  background-color: var(--color-primary-light);
+}
+.bg-primary-dark {
+  background-color: var(--color-primary-dark);
+}
+
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+.bg-secondary-light {
+  background-color: var(--color-secondary-light);
+}
+.bg-secondary-dark {
+  background-color: var(--color-secondary-dark);
+}
+
+.bg-success {
+  background-color: var(--color-success);
+}
+.bg-success-light {
+  background-color: var(--color-success-light);
+}
+.bg-success-dark {
+  background-color: var(--color-success-dark);
+}
+
+.bg-dark {
+  background-color: var(--color-dark);
+}
+.bg-dark-light {
+  background-color: var(--color-dark-light);
+}
+
+.bg-light {
+  background-color: var(--color-light);
+}
+
+/* Text Colors */
+.text-primary {
+  color: var(--color-primary);
+}
+.text-primary-light {
+  color: var(--color-primary-light);
+}
+.text-primary-dark {
+  color: var(--color-primary-dark);
+}
+
+.text-secondary {
+  color: var(--color-secondary);
+}
+.text-secondary-light {
+  color: var(--color-secondary-light);
+}
+.text-secondary-dark {
+  color: var(--color-secondary-dark);
+}
+
+.text-success {
+  color: var(--color-success);
+}
+.text-success-light {
+  color: var(--color-success-light);
+}
+.text-success-dark {
+  color: var(--color-success-dark);
+}
+
+.text-dark {
+  color: var(--color-dark);
+}
+.text-dark-light {
+  color: var(--color-dark-light);
+}
+
+.text-light {
+  color: var(--color-light);
+}
+
+
+.border-primary {
+  border-color: var(--color-primary);
+}
+.border-success-dark {
+  border-color: var(--color-success-dark);
+}
+.border-secondary {
+  border-color: var(--color-secondary);
+}
+.border-dark {
+  border-color: var(--color-dark);
+}
+.border-light {
+  border-color: var(--color-light);
+}
+
+
+
+
+/* Hero Section Glass blur */
+@keyframes reflection {
+  0% { transform: translateX(-100%) translateY(-100%); }
+  100% { transform: translateX(100%) translateY(100%); }
+}
+.animate-reflection {
+  animation: reflection 8s linear infinite;
+}
+
+
+
+
+
+/* Under hero section styling */
+@keyframes float-slow {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(10px, 15px); }
+}
+@keyframes float-reverse {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-10px, -15px); }
+}
+.animate-float-slow { animation: float-slow 8s ease-in-out infinite; }
+.animate-float-reverse { animation: float-reverse 6s ease-in-out infinite; }
+
+
+
+
+/* Our Benifit Section Styling */
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-15px) translateX(10px); }
+}
+@keyframes float-reverse {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(15px) translateX(-10px); }
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+@keyframes twinkle {
+  0%, 100% { opacity: 0.8; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+.animate-float-slow { animation: float-slow 8s ease-in-out infinite; }
+.animate-float-reverse { animation: float-reverse 10s ease-in-out infinite; }
+.animate-blink { animation: blink 2s ease-in-out infinite; }
+.animate-twinkle { animation: twinkle 2s ease-in-out infinite; }
+
+
+
+
+/* Parent testimonials */
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-15px) translateX(10px); }
+}
+@keyframes float-reverse {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(15px) translateX(-10px); }
+}
+.animate-float-slow { animation: float-slow 8s ease-in-out infinite; }
+.animate-float-reverse { animation: float-reverse 10s ease-in-out infinite; }
+
+
+
+/* Gallery Styling */
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-15px) translateX(10px); }
+}
+@keyframes float-reverse {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(15px) translateX(-10px); }
+}
+.animate-float-slow { animation: float-slow 8s ease-in-out infinite; }
+.animate-float-reverse { animation: float-reverse 10s ease-in-out infinite; }
+
+
+
+/* Why Choose Us Styling */
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-15px) translateX(10px); }
+}
+@keyframes float-reverse {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(15px) translateX(-10px); }
+}
+@keyframes pulse-slow {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+.animate-float-slow { animation: float-slow 8s ease-in-out infinite; }
+.animate-float-reverse { animation: float-reverse 10s ease-in-out infinite; }
+.animate-pulse-slow { animation: pulse-slow 4s ease-in-out infinite; }
+
+
+/* FAQs Styling */
+@keyframes float {
+  0%, 100% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-15px) translateX(10px); }
+}
+.animate-float {
+  animation: float 10s ease-in-out infinite;
+}
+
+
+/* AboutUs Banner */
