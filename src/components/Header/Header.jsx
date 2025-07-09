@@ -16,7 +16,7 @@ export const Header = () => {
 
   const dropdownItems = [
     'Academic', 'Extracurricular', 'Development Plans', 'Careers',
-    'Home Learning', 'Achievements', 'Counseling Dept', 'Alumni', 'Admission Policy'
+    'Home Learning', 'Achievements', 'Counseling Dept', 'Alumni', 
   ];
 
   const mainNavItems = [
